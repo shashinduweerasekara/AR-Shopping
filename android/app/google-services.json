@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "327203487112",
+    "project_id": "ar-shopping-86786",
+    "storage_bucket": "ar-shopping-86786.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327203487112:android:ceface15f3db556349ce3d",
+        "android_client_info": {
+          "package_name": "com.arshopping"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327203487112-mtvp04aurg96vqnp3em0nv1je2vv744m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arshopping",
+            "certificate_hash": "e59ca8cbfbde397c2687cacda5dbde4edcb3d6a7"
+          }
+        },
+        {
+          "client_id": "327203487112-e8bb8legh5db1bce4lfnf9eq1be6n6fg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDWN7U_smpOtH9WNqvykt8VactRWlAVII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327203487112-e8bb8legh5db1bce4lfnf9eq1be6n6fg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
