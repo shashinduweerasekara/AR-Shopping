@@ -4,6 +4,7 @@ import {AuthContext} from './AuthProvider';
 import AuthStack from './AuthStack';
 import HomeScreen from '../screens/HomeScreen';
 import auth from '@react-native-firebase/auth';
+import TabNavigator from "./TabNavigator";
 
 export default function Routes() {
   const {user, setUser} = useContext(AuthContext);
@@ -23,7 +24,7 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
-      {user ? <HomeScreen /> : <AuthStack />}
+      {user ? <TabNavigator /> : <AuthStack />}
     </NavigationContainer>
   );
 }
