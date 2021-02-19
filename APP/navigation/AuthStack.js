@@ -7,6 +7,7 @@ import OnBoardingScreen from '../screens/OnBoardingScreen';
 import SignInScreen from '../screens/SignInScreen';
 import SignUpScreen from '../screens/SignUpScreen';
 import HomeScreen from '../screens/HomeScreen';
+import CartScreen from '../screens/CartScreen';
 
 const Stack = createStackNavigator();
 
@@ -55,11 +56,7 @@ export default function AuthStack() {
         component={SignUpScreen}
         options={{header: () => null}}
       />
-      <Stack.Screen
-        name="Home"
-        component={HomeScreen}
-        options={{header: () => null}}
-      />
+      <Stack.Screen name="Home" component={CartScreen} />
     </Stack.Navigator>
   );
 }

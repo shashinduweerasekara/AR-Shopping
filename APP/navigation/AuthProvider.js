@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, createContext} from 'react';
 import auth from '@react-native-firebase/auth';
-import {createContext} from 'react';
 import {GoogleSignin} from '@react-native-community/google-signin';
 
 export const AuthContext = createContext();

@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {AuthContext} from './AuthProvider';
 import AuthStack from './AuthStack';
 import HomeScreen from '../screens/HomeScreen';
+import CartScreen from '../screens/CartScreen';
 import auth from '@react-native-firebase/auth';
 
 export default function Routes() {
@@ -23,7 +24,7 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
-      {user ? <HomeScreen /> : <AuthStack />}
+      {user ? <CartScreen /> : <AuthStack />}
     </NavigationContainer>
   );
 }
