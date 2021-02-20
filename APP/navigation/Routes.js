@@ -3,6 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {AuthContext} from './AuthProvider';
 import AuthStack from './AuthStack';
 import HomeScreen from '../screens/HomeScreen';
+import CartScreen from '../screens/CartScreen';
 import auth from '@react-native-firebase/auth';
 import TabNavigator from "./TabNavigator";
 
@@ -24,6 +25,7 @@ export default function Routes() {
 
   return (
     <NavigationContainer>
+
       {user ? <TabNavigator /> : <AuthStack />}
     </NavigationContainer>
   );
