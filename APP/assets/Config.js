@@ -8,5 +8,7 @@ export default {
   b: '#000000', // Black
   w: '#ffffff', // White
 
+  St:'#81b214',
+
   br: 10, // Border radius
 };

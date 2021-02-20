@@ -7,7 +7,7 @@ import AppStack from './AppStack' ;
 import CartScreen from '../screens/CartScreen' ;
 import ProfileScreen from "../screens/ProfileScreen";
 import HomeScreen from '../screens/HomeScreen' ;
-
+import Config from "../assets/Config";
 
 
 const Tab = createMaterialBottomTabNavigator()
@@ -16,9 +16,9 @@ export default function TabNavigator() {
     return (
         <Tab.Navigator 
         barStyle={{
-            backgroundColor: '#455a64',
+            backgroundColor: Config.s1,
             margin: 0,
-            padding: 3,
+            padding: 0,
             
           }}>
             <Tab.Screen

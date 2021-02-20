@@ -14,6 +14,7 @@ import {
   Button,
 } from 'react-native';
 import CartItem from '../components/CartItem';
+import Head from '../components/Head';
 
 const DATA = [
   {
@@ -47,7 +48,9 @@ const DATA = [
 
 const CartScreen = () => {
   return (
+    
     <SafeAreaView style={styles.container}>
+      <Head/>
       <View style={styles.upperText}>
         <Text style={styles.itemCount}>Items ( 03 )</Text>
         <View style={styles.checkOutBtn}>

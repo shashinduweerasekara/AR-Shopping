@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,Component} from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,7 @@ import {
   Button,
 } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Config from '../assets/Config';
 import AppStack from "../navigation/AppStack";
 
 
@@ -26,7 +27,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot1.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -38,7 +39,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot2.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -50,7 +51,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot3.jpeg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -62,7 +63,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot4.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -74,7 +75,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot9.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -86,7 +87,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot6.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -98,7 +99,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot7.jpeg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -110,7 +111,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot2.jpg'),
+      img: require('../images/dot8.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -122,7 +123,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot7.jpg'),
+      img: require('../images/dot5.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -134,7 +135,7 @@ export default function ProductS({navigation}) {
       unit: 'g',
       value: '500',
       rate: 4.9,
-      img: require('../images/dot2.jpg'),
+      img: require('../images/dot10.jpg'),
       description:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
     },
@@ -143,7 +144,7 @@ export default function ProductS({navigation}) {
   return (
     
 
-
+<View style={styles.backdrop} >
     
      <FlatList numColumns = {numColumns}
               data={products}
@@ -169,12 +170,12 @@ export default function ProductS({navigation}) {
                 </TouchableOpacity>
               )}
             /> 
-  )
+  </View>)
 }
 
 const styles = StyleSheet.create({
   
-
+backdrop:{backgroundColor:Config.w},
 
   hotProductImgContainer: {
     alignItems: 'center',

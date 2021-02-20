@@ -1,15 +1,17 @@
-import React from 'react'
+import React ,{Component}from 'react'
 import { TouchableOpacity } from 'react-native'
 import { View, Text ,StyleSheet,Image} from 'react-native'
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 import AppStack from "../navigation/AppStack";
+import Config from '../assets/Config';
+import Head from '../components/Head' ;
 
 
 const HomeScreen = ({navigation}) => {
  return(
     <View >
         
-      
+      <Head/>
       <View style={styles.container} >
         
         <Image  style={styles.image} source={require('../images/testlast.png')}/>
@@ -31,8 +33,8 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create(
 {
   container :{ alignItems:"center" ,justifyContent :"center"},
-  text :{fontSize:18},
-  image:{width:"70%", height: 350, marginTop : 20 ,borderRadius:10 , borderColor:'black',borderWidth :1},
+  text :{fontSize:19},
+  image:{width:"75%", height: 370, marginTop : 20 ,borderRadius:10 , borderColor:'black',borderWidth :1},
   icon :{fontSize: 50,marginTop:10,marginBottom:10,}
 }
 );

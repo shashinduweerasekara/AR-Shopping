@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Config from '../assets/Config';
 
 export default function DetailScreen({route, navigation}) {
   const {title, price, img, measure, unit, value, description} = route.params;
@@ -71,7 +72,7 @@ export default function DetailScreen({route, navigation}) {
 const styles = StyleSheet.create({
   productViewScreen: {
     flex: 1,
-    
+    backgroundColor:Config.w ,
     height: '100%',
   },
 
@@ -111,6 +112,7 @@ const styles = StyleSheet.create({
   },
   productPrice: {
     fontSize: 21,
+    color :Config.St
   },
 
   productDescriptionContainer: {
@@ -119,7 +121,7 @@ const styles = StyleSheet.create({
 
   productDescription: {
     fontSize: 16,
-    
+    textAlign:'justify'
   },
 
   productWnQRow: {
@@ -142,7 +144,9 @@ const styles = StyleSheet.create({
 
   productQIcon: {
     fontSize: 16,
-
+    backgroundColor : Config.s1 ,
+    borderRadius :Config.br,
+    padding:1,
   },
 
   productQIconContainer: {
@@ -163,7 +167,7 @@ const styles = StyleSheet.create({
   addCartBtn: {
    
     borderWidth: 2,
-  
+    borderRadius:Config.br ,
     width: 150,
     paddingTop: 10,
     paddingBottom: 10,
@@ -173,11 +177,12 @@ const styles = StyleSheet.create({
   buyNowBtn: {
     
     borderWidth: 2,
-    
+    borderRadius:Config.br ,
     width: 150,
     paddingTop: 10,
     paddingBottom: 10,
     alignItems: 'center',
+    backgroundColor:Config.p1
   },
 
   btnText: {
