@@ -18,39 +18,47 @@ import Head from '../components/Head';
 
 const DATA = [
   {
-    id: '6cfa6a89-fb87-476e-b0e7-b17905c545c9',
-    name: 'Toy with Bells',
-    description: 'Toy with bells and almost whistles!',
-    price: 1850,
-    currency: 'LKR',
-    imageUrl:
-      'https://bootcamp-mad.s3-us-west-2.amazonaws.com/product-image-5.png',
+    key: 'P1',
+    title: 'Product1',
+    price: 5.0,
+    measure: 'Weight',
+    unit: 'g',
+    value: '500',
+    rate: 4.9,
+    img: require('../images/dot10.jpg'),
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
   },
   {
-    id: '8585226b-0957-468f-a008-568d7ee29d94',
-    name: 'Rugged bone toy',
-    description: 'Rugged studded bone toy that helps clean teeth',
-    price: 250,
-    currency: 'LKR',
-    imageUrl:
-      'https://bootcamp-mad.s3-us-west-2.amazonaws.com/product-image-8.png',
+    key: 'P2',
+    title: 'Product2',
+    price: 4.0,
+    measure: 'Weight',
+    unit: 'g',
+    value: '500',
+    rate: 4.9,
+    img: require('../images/dot8.jpg'),
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
   },
   {
-    id: '19951441-83e8-4297-a8e9-e1633f4bf75d',
-    name: 'Food Dispensor Toy',
-    description: 'Chewing toy with incentive. Include treats in the toy.',
-    price: 350,
-    currency: 'LKR',
-    imageUrl:
-      'https://bootcamp-mad.s3-us-west-2.amazonaws.com/product-image-6.png',
+    key: 'P3',
+    title: 'Product3',
+    price: 8,
+    measure: 'Weight',
+    unit: 'g',
+    value: '500',
+    rate: 4.9,
+    img: require('../images/dot7.jpg'),
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius laudantium maxime, architecto dolorem saepe rerum, magni assumenda suscipit dolore consequuntur dolorum doloremque praesentium, porro qui.',
   },
 ];
 
 const CartScreen = () => {
   return (
-    
     <SafeAreaView style={styles.container}>
-      <Head/>
+      <Head />
       <View style={styles.upperText}>
         <Text style={styles.itemCount}>Items ( 03 )</Text>
         <View style={styles.checkOutBtn}>
@@ -60,8 +68,10 @@ const CartScreen = () => {
 
       <FlatList
         data={DATA}
-        renderItem={({item}) => <CartItem item={item} />}
-        keyExtractor={({id}, index) => id}
+        renderItem={({item}) => {
+          return <CartItem item={item} />;
+        }}
+        keyExtractor={({key}) => key}
       />
     </SafeAreaView>
   );

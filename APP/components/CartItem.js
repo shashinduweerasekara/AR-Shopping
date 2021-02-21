@@ -19,14 +19,9 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 const CartItem = ({item}) => (
   <View style={styles.container}>
     <View style={{flexDirection: 'row'}}>
-      <Image
-        style={{width: 50, height: 50}}
-        source={{
-          uri: item.imageUrl,
-        }}
-      />
+      <Image style={{width: 50, height: 50}} source={item.img} />
       <View style={{flexDirection: 'column'}}>
-        <Text style={styles.itemText}>{item.name}</Text>
+        <Text style={styles.itemText}>{item.title}</Text>
         <View style={styles.deleteBtn}>
           <Icon name="trash" size={20} color="darkgreen" />
         </View>
@@ -34,9 +29,7 @@ const CartItem = ({item}) => (
     </View>
 
     <View style={{flexDirection: 'column', justifyContent: 'space-between'}}>
-      <Text style={styles.itemText}>
-        {item.currency} {item.price}
-      </Text>
+      <Text style={styles.itemText}>$ {item.price}</Text>
 
       <View style={{flexDirection: 'row-reverse'}}>
         <Text style={styles.icon}>
@@ -50,6 +43,7 @@ const CartItem = ({item}) => (
     </View>
   </View>
 );
+
 export default CartItem;
 
 const styles = StyleSheet.create({
